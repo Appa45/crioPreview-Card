@@ -1,0 +1,337 @@
+/* ==============================
+   RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+================================= */
+
+body {
+  min-height: 100vh;
+
+  background-color: hsl(217, 54%, 11%);
+
+  font-family: "Outfit", sans-serif;
+
+  position: relative;
+
+  overflow-x: hidden;
+}
+
+
+/* ==============================
+   CARD - PERFECT CENTER
+================================= */
+
+.card {
+  width: 350px;
+  max-width: calc(100% - 40px);
+
+  padding: 24px;
+
+  background-color: hsl(216, 50%, 16%);
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.25);
+
+  /* Perfect horizontal + vertical centering */
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* ==============================
+   IMAGE
+================================= */
+
+.card__images {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+/* NFT image */
+
+.card__images-main {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 8px;
+}
+
+
+/* ==============================
+   IMAGE HOVER LAYER
+================================= */
+
+.card__images-layer {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 255, 247, 0.5);
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+
+/* Eye icon */
+
+.card__images-layer img {
+  width: 48px;
+  height: 48px;
+}
+
+
+/* Hover */
+
+.card__images:hover .card__images-layer {
+  opacity: 1;
+}
+
+
+/* ==============================
+   TITLE
+================================= */
+
+.card__title h1 {
+  margin-top: 22px;
+  margin-bottom: 12px;
+
+  color: hsl(0, 0%, 100%);
+
+  font-size: 22px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+
+.card__title h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+
+/* Description */
+
+.card__title p {
+  color: hsl(215, 51%, 70%);
+
+  font-size: 18px;
+  font-weight: 300;
+
+  line-height: 1.5;
+}
+
+
+/* ==============================
+   PRICE + TIME
+================================= */
+
+.card__time {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+
+.card__time-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: hsl(178, 100%, 50%);
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+.card__time-left img {
+  width: 11px;
+}
+
+
+.card__time-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: hsl(215, 51%, 70%);
+
+  font-size: 16px;
+
+  font-weight: 400;
+}
+
+
+.card__time-right img {
+  width: 16px;
+}
+
+
+/* ==============================
+   CREATOR
+================================= */
+
+.card__creator {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 16px;
+}
+
+
+.card__creator-image,
+.creator-image {
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid white;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+.card__creator p {
+  color: hsl(215, 51%, 70%);
+
+  font-size: 16px;
+
+  font-weight: 300;
+}
+
+
+.card__creator span {
+  color: white;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+
+.card__creator span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+.attribution {
+  position: fixed;
+
+  bottom: 20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  color: hsl(215, 51%, 70%);
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+
+.attribution a {
+  color: hsl(178, 100%, 50%);
+
+  text-decoration: none;
+}
+
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .card {
+    width: calc(100% - 40px);
+
+    max-width: 350px;
+
+    padding: 24px;
+  }
+
+  .card__title h1 {
+    font-size: 21px;
+  }
+
+  .card__title p {
+    font-size: 17px;
+  }
+
+  .card__time-left,
+  .card__time-right {
+    font-size: 15px;
+  }
+
+  .attribution {
+    bottom: 10px;
+
+    font-size: 11px;
+  }
+}
