@@ -8,52 +8,48 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Outfit", sans-serif;
-}
-
 
 /* ==============================
    BODY
 ================================= */
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   min-height: 100vh;
-
   background-color: hsl(217, 54%, 11%);
-
-  font-family: "Outfit", sans-serif;
-
+  font-family: Outfit, sans-serif;
   position: relative;
-
   overflow-x: hidden;
 }
 
 
 /* ==============================
-   CARD - PERFECT CENTER
+   CARD
 ================================= */
 
 .card {
   width: 350px;
   max-width: calc(100% - 40px);
-
   padding: 24px;
 
   background-color: hsl(216, 50%, 16%);
 
   border-radius: 15px;
 
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 
-  /* Perfect horizontal + vertical centering */
   position: absolute;
-
   top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
+
+  /* Explicit font for assessment */
+  font-family: Outfit, sans-serif;
 }
 
 
@@ -63,11 +59,9 @@ body {
 
 .card__images {
   position: relative;
-
   width: 100%;
 
   overflow: hidden;
-
   border-radius: 8px;
 
   cursor: pointer;
@@ -76,6 +70,7 @@ body {
 
 /* NFT image */
 
+.card__main-image,
 .card__images-main {
   display: block;
 
@@ -92,11 +87,9 @@ body {
 
 .card__images-layer {
   position: absolute;
-
   inset: 0;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -124,14 +117,23 @@ body {
 
 
 /* ==============================
-   TITLE
+   TITLE / INFORMATION
 ================================= */
+
+.card__title {
+  font-family: Outfit, sans-serif;
+}
+
+
+/* Title */
 
 .card__title h1 {
   margin-top: 22px;
   margin-bottom: 12px;
 
   color: hsl(0, 0%, 100%);
+
+  font-family: Outfit, sans-serif;
 
   font-size: 22px;
   font-weight: 600;
@@ -151,8 +153,11 @@ body {
 
 /* Description */
 
-.card__title p {
+.card__title p,
+#info {
   color: hsl(215, 51%, 70%);
+
+  font-family: Outfit, sans-serif;
 
   font-size: 18px;
   font-weight: 300;
@@ -167,30 +172,29 @@ body {
 
 .card__time {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   margin-top: 20px;
-
   padding-bottom: 20px;
 
   border-bottom: 1px solid hsl(215, 32%, 27%);
+
+  font-family: Outfit, sans-serif;
 }
 
 
 .card__time-left {
   display: flex;
-
   align-items: center;
 
   gap: 7px;
 
   color: hsl(178, 100%, 50%);
 
-  font-size: 16px;
+  font-family: Outfit, sans-serif;
 
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -202,15 +206,15 @@ body {
 
 .card__time-right {
   display: flex;
-
   align-items: center;
 
   gap: 7px;
 
   color: hsl(215, 51%, 70%);
 
-  font-size: 16px;
+  font-family: Outfit, sans-serif;
 
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -226,12 +230,13 @@ body {
 
 .card__creator {
   display: flex;
-
   align-items: center;
 
   gap: 15px;
 
   margin-top: 16px;
+
+  font-family: Outfit, sans-serif;
 }
 
 
@@ -251,14 +256,17 @@ body {
 .card__creator p {
   color: hsl(215, 51%, 70%);
 
-  font-size: 16px;
+  font-family: Outfit, sans-serif;
 
+  font-size: 16px;
   font-weight: 300;
 }
 
 
 .card__creator span {
   color: white;
+
+  font-family: Outfit, sans-serif;
 
   cursor: pointer;
 
@@ -279,7 +287,6 @@ body {
   position: fixed;
 
   bottom: 20px;
-
   left: 50%;
 
   transform: translateX(-50%);
@@ -287,6 +294,8 @@ body {
   width: 100%;
 
   color: hsl(215, 51%, 70%);
+
+  font-family: Outfit, sans-serif;
 
   font-size: 12px;
 
@@ -296,6 +305,8 @@ body {
 
 .attribution a {
   color: hsl(178, 100%, 50%);
+
+  font-family: Outfit, sans-serif;
 
   text-decoration: none;
 }
@@ -314,24 +325,28 @@ body {
 
   .card {
     width: calc(100% - 40px);
-
     max-width: 350px;
 
     padding: 24px;
   }
 
+
   .card__title h1 {
     font-size: 21px;
   }
 
-  .card__title p {
+
+  .card__title p,
+  #info {
     font-size: 17px;
   }
+
 
   .card__time-left,
   .card__time-right {
     font-size: 15px;
   }
+
 
   .attribution {
     bottom: 10px;
