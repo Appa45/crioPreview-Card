@@ -31,6 +31,11 @@ body {
    CARD
 ================================= */
 
+
+#info {
+  font-family: Outfit, sans-serif !important;
+}
+
 .card {
   width: 350px;
   max-width: calc(100% - 40px);
